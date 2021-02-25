@@ -1,4 +1,11 @@
 /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+/*
 Colours used
 
 Primary Text Color (Dark Grey): #2b2b2b;
@@ -11,17 +18,8 @@ Secondary Color Lighter (Lighter Yellow): #df9920;
 
 /***************** GENERAL RULES *****************/
 * {
-  box-sizing: border-box;
-}
-:root {
-  --primary-color: #537e7c;
-  --primary-color-darker: #276864;
-  --secondary-color: #c27b00;
-  --secondary-color-lighter: #df9920; 
-  --primary-color-text: #2b2b2b;
-  --font-weight-normal: 300; 
-  --font-weight-semi-bold: 700;
-  --font-weight-bold: 1,400;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 div {
   padding: 10px; /* adds 10px spacing inside the div*/
@@ -30,49 +28,55 @@ div {
 body {
   background-color: white;
   font-family: 'Josefin Sans', sans-serif;
-  font-weight: var(--font-weight-normal);
+  font-weight: 300;
   font-size: 18px;
   line-height: 1.5;
-  color: var(--primary-color-text);
+  color: #2b2b2b;
 }
 header {
   background-color: white;
   font-family: Montserrat;
-  font-weight: var(--font-weight-semi-bold);
+  font-weight: 700;
   font-variant: small-caps;
   font-size: 20px;
   line-height: 1.3;
-  color: var(--primary-color);
+  color: #537e7c;
 }
 li {
   list-style-type: none;
 }
 h1 {
   font-size: 28px;
-  font-weight: var(--font-weight-semi-bold);
-  color: var(--primary-color);
+  font-weight: 700;
+  color: #537e7c;
 }
 h2 {font-size: 24px;
-  font-weight: var(--font-weight-semi-bold);
-  color: var(--primary-color);
+  font-weight: 700;
+  color: #537e7c;
 }
 h3 {font-size: 22px;
-  font-weight: var(--font-weight-semi-bold);
-  color: var(--primary-color);
+  font-weight: 700;
+  color: #537e7c;
 }
 
 
 /**************** WEBSITE HEADER *****************/
 .page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   padding: 20px;
 }
 .page-header__item {
-  flex: 0 1 200px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px;
 }
 .page-header__item:last-child {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   text-align: right;
 }
 .navigation-list li {
@@ -81,7 +85,7 @@ h3 {font-size: 22px;
 }
 .navigation-list__item {
   text-decoration: underline;
-  color: var(--secondary-color)
+  color: #c27b00
 }
 .navigation-list__item--active {
   text-decoration: none;
@@ -94,8 +98,13 @@ h3 {font-size: 22px;
 /**************** WEBSITE FOOTER *****************/
 .page-footer {
   clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 footer {
   text-align:center;
@@ -104,25 +113,30 @@ footer {
 
 /**************** LINKS RULES *****************/
 .standard-link {
-  color:var(--primary-color);
+  color:#537e7c;
 }
 .standard-link :visited {
-  color: var(--secondary-color);
+  color: #c27b00;
 }
 .standard-link:hover, .standard-link:focus {
   /* No underlining when hovering over a link */
   text-decoration: none
 }.standard-link:active {
   /* selected link */
-  color:var(--secondary-color);
+  color:#c27b00;
+}
+.social-media {
+  padding: 20px;
 }
 .social-media-link {
   text-decoration: none;
-  box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow:10px 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow:10px 5px 5px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
 .social-media-link:hover, .social-media-link:focus {
-  box-shadow: none
+  -webkit-box-shadow: none;
+          box-shadow: none
 }
 
 
@@ -130,7 +144,8 @@ footer {
 .profile__portrait {
   float: left;
   border-radius: 50%;
-  box-shadow: 0 4px 6px 0 rgba(34, 60, 80, .16);
+  -webkit-box-shadow: 0 4px 6px 0 rgba(34, 60, 80, .16);
+          box-shadow: 0 4px 6px 0 rgba(34, 60, 80, .16);
   margin-left: 40px;
   margin-right: 40px;
   }
@@ -141,14 +156,14 @@ footer {
 
 
 /**************** BUTTON RULES *****************/
-button, .button {
+button {
   /* overrides browser defaults & resets the border */
   border: none;
   display: inline-block;
   /* button styling */
   font-family: Josefin Sans;
-  font-weight: var(--font-weight-bold);
-  background-color: var(--secondary-color-lighter);
+  font-weight: 1,400;
+  background-color: #df9920;
   color: black;	
   text-decoration: none;
   padding: 4px;
@@ -158,6 +173,29 @@ button, .button {
   /* creates a "shadow" at the bottom and right of the button*/
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   border-right: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.5s opacity;
+  -o-transition: 0.5s opacity;
+  transition: 0.5s opacity;
+}
+.button {
+  /* overrides browser defaults & resets the border */
+  border: none;
+  display: inline-block;
+  /* button styling */
+  font-family: Josefin Sans;
+  font-weight: 1,400;
+  background-color: #df9920;
+  color: black;	
+  text-decoration: none;
+  padding: 4px;
+  padding-right: 6px;
+  padding-left: 6px;
+  border-radius: 3px;
+  /* creates a "shadow" at the bottom and right of the button*/
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.5s opacity;
+  -o-transition: 0.5s opacity;
   transition: 0.5s opacity;
 }
 .cv-button {
@@ -166,8 +204,8 @@ button, .button {
   display: inline-block;
   /* button styling */
   font-family: Josefin Sans;
-  font-weight: var(--font-weight-bold);
-  background-color: var(--secondary-color-lighter); opacity: 0.9;
+  font-weight: 1,400;
+  background-color: #df9920; opacity: 0.9;
   color: black;	
   text-decoration: none;
   padding: 4px;
@@ -177,6 +215,8 @@ button, .button {
   /* creates a "shadow" at the bottom and right of the button*/
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   border-right: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.5s opacity;
+  -o-transition: 0.5s opacity;
   transition: 0.5s opacity;  
 }
 button:hover, .button:hover, button:focus, .button:focus {
@@ -202,10 +242,10 @@ table {
   padding: 20px;
 }
 .thead {
-  color: var(--primary-color);
+  color: #537e7c;
 }
 .td {
-  color: var(--primary-color-text);
+  color: #2b2b2b;
   padding: 10px;
 }
 
@@ -218,8 +258,10 @@ table {
 }
  /* end grid fallback */
 .grid {
+  display: -ms-grid;
   display: grid; 
      /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
   margin: 0;
@@ -250,6 +292,14 @@ table {
   margin-right: auto;
   width: 100%;
 }
+@-webkit-keyframes color-change {
+  from {
+    fill: #edc655;
+  }
+  to {
+    fill: #f76414;
+  }
+}
 @keyframes color-change {
   from {
     fill: #edc655;
@@ -270,34 +320,62 @@ table {
   }
 }
 .sun {
-  animation: 4s color-change infinite alternate linear;
+  -webkit-animation: 4s color-change infinite alternate linear;
+          animation: 4s color-change infinite alternate linear;
+}
+@-webkit-keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  }
+  to {
+    -webkit-transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
+  }
 }
 @keyframes cloud-move {
   from {
-    transform: translate(0, 50px);
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
   }
   to {
-    transform: translate(200px, 50px);
+    -webkit-transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
   }
 }
 .cloud-front {
-  animation: 30s cloud-move infinite alternate linear;
+  -webkit-animation: 30s cloud-move infinite alternate linear;
+          animation: 30s cloud-move infinite alternate linear;
+}
+@-webkit-keyframes cloud-move-reverse {
+  from {
+    -webkit-transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
+  }
+  to {
+    -webkit-transform: translate(100px, 48px);
+            transform: translate(100px, 48px);
+  }
 }
 @keyframes cloud-move-reverse {
   from {
-    transform: translate(446px, 48px);
+    -webkit-transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
   }
   to {
-    transform: translate(100px, 48px);
+    -webkit-transform: translate(100px, 48px);
+            transform: translate(100px, 48px);
   }
 }
 .cloud-back {
-  animation: 20s cloud-move-reverse infinite alternate linear;
+  -webkit-animation: 20s cloud-move-reverse infinite alternate linear;
+          animation: 20s cloud-move-reverse infinite alternate linear;
 }
 
 /**************** MEDIA QUERIES *****************/
 @media all and (max-width: 500px) {
   .grid {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
   #logo {
@@ -308,6 +386,7 @@ table {
 }
 @media all and (min-width: 500px) and (max-width: 750px) {
   .grid {
+    -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -326,4 +405,3 @@ table {
     font-size: 20px;
   }
 }
-
