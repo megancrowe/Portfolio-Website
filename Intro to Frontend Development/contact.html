@@ -13,7 +13,9 @@
   </head>
   <body>
     <header class="page-header">
+      <!-- Megan Crowe Logo -->
       <a href="index.html"><img src=img/Megan-Crowe-Logo.jpg class="page-header__item" alt="The logo of Megan Crowe, which is the words 'Megan Crowe' in cursive writing" height=70px #logo aria-hidden></a>
+      <!-- Navigation Bar -->
       <nav class="main-navigation page-header__item">
         <ul role="menubar" class="navigation-list">
           <li role ="presentation">
@@ -32,6 +34,7 @@
       </nav>	
     </header>
     <main>
+      <!-- Contact Information -->
       <h1>Contact</h1>
         <div>
           Megan Crowe<br>
@@ -40,6 +43,7 @@
           Phone: 1-234-567-8910<br>
           <label for="my-skype-name">Skype:</label>
           <input id="my-skype-name-text-box" type="text" value="live:.cid.a64646bca08be5aa" id="my-skype-name">
+          <!-- Copy text onclick button *see copy-text-experiment.js* -->
           <button onclick="myFunction()">Copy text</button>
           <br>
 
@@ -51,21 +55,27 @@
           <br>
         </div>
         <div class ="email-form">
+          <!-- Email Form -->
           <form action="mailto:crowemegane@gmail.com" method="post" enctype="text/plain">
             <h2>Contact Form</h2>
+              <!-- Name Input Box -->
               <label class="standard-label" for="contact-name">Name*</label><br>
                 <input type="text" class="contact-text-box" required id="contact-name" placeholder="Your name"><br>
+              <!-- Email Input Box -->
               <label class="standard-label" for="contact-email">Email*</label><br>
                 <input type="email" class="contact-text-box" required id="contact-email" placeholder="Your email"><br>
+              <!-- Phone Number Input Box -->
               <label class="standard-label" for="contact-phone">Phone</label><br>
                 <input type="tel" class="contact-text-box" id="contact-phone" placeholder="Your phone number">
           </label><br>
           <label for="message">Message*</label><br>
-              <textarea id="message" required rows="4" cols="50" maxlength="500" placeholder="Your message"></textarea>
+          <!-- Text Input Area -->
+            <textarea id="message" required rows="4" cols="50" maxlength="500" placeholder="Your message"></textarea>
           </label>
           <br>
           <br>
             <div>
+              <!-- Send Message Button -->
               <button onclick="Send Message" valid="Send Message">Send</button>
             </div>
           </form>
@@ -75,6 +85,7 @@
     <br>
     <br>
     <footer class="page-footer" flex-direction="column">
+      <!-- Social Media Links and Footer -->
       <p>Find me on</p>
       <div class="social-media">
         <a href="https://www.linkedin.com/in/crowemegan/" class="social-media-link" target="_blank">
@@ -92,6 +103,7 @@
       <a href="#top"class="standard-link">Jump to top</a> 
     </footer>
     </div>
-    <script src ="js/tota11y.min.js"></script>
+    <script src="js/tota11y.min.js"></script>
+    <script src="js/copy-text-experiment.js"></script> 
   </body>
 </html>
