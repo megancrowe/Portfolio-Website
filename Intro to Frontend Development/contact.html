@@ -4,17 +4,17 @@
     <meta charset="utf-8">
     <title>Contact For Megan Crowe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="img\MC-favicon-32x32.png">
+    <link rel="shortcut icon" href="img/MC-favicon-32x32.png">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,700, 1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,700,1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.production.css">
   </head>
   <body>
     <header class="page-header">
       <!-- Megan Crowe Logo -->
-      <a href="index.html"><img src=img/Megan-Crowe-Logo.jpg class="page-header__item" alt="The logo of Megan Crowe, which is the words 'Megan Crowe' in cursive writing" height=70px #logo aria-hidden></a>
+      <a href="index.html"><img src=img/Megan-Crowe-Logo.jpg class="page-header__item" alt="The logo of Megan Crowe, which is the words 'Megan Crowe' in cursive writing" height=70 id="logo" aria-hidden="true"></a>
       <!-- Navigation Bar -->
       <nav class="main-navigation page-header__item">
         <ul role="menubar" class="navigation-list">
@@ -41,15 +41,14 @@
           Calgary, AB<br>
           <br>
           Phone: 1-234-567-8910<br>
-          <label for="my-skype-name">Skype:</label>
-          <input id="my-skype-name-text-box" type="text" value="live:.cid.a64646bca08be5aa" id="my-skype-name">
+          <label class="my-skype-name">Skype:</label>
+          <input id="my-skype-name-text-box" type="text" value="live:.cid.a64646bca08be5aa">
           <!-- Copy text onclick button *see copy-text-experiment.js* -->
           <button onclick="myFunction()">Copy text</button>
           <br>
-
           <br>
           Send me an email at 
-            <a href="mailto:crowemegane@gmail.com"class="standard-link">crowemegane@gmail.com</a>,
+            <a href="mailto:crowemegane@gmail.com" class="standard-link">crowemegane@gmail.com</a>,
           or fill out the contact form below
           <br>
           <br>
@@ -67,11 +66,10 @@
               <!-- Phone Number Input Box -->
               <label class="standard-label" for="contact-phone">Phone</label><br>
                 <input type="tel" class="contact-text-box" id="contact-phone" placeholder="Your phone number">
-          </label><br>
+          <br>
           <label for="message">Message*</label><br>
           <!-- Text Input Area -->
             <textarea id="message" required rows="4" cols="50" maxlength="500" placeholder="Your message"></textarea>
-          </label>
           <br>
           <br>
             <div>
@@ -84,25 +82,24 @@
     <br>
     <br>
     <br>
-    <footer class="page-footer" flex-direction="column">
+    <footer class="page-footer">
       <!-- Social Media Links and Footer -->
       <p>Find me on</p>
       <div class="social-media">
         <a href="https://www.linkedin.com/in/crowemegan/" class="social-media-link" target="_blank">
-          <img src="img\linkedin.svg" alt="LinkedIn Logo" height="32px" width="32px">
+          <img src="img/linkedin.svg" alt="LinkedIn Logo" height="32" width="32">
         </a>
         <a href="https://github.com/megancrowe" class="social-media-link" target="_blank">
-          <img src="img\github.svg" height="32px" width="32px" alt="Github Logo">
+          <img src="img/github.svg" height="32" width="32" alt="Github Logo">
         </a>
         <a href="https://www.instagram.com/instafroglet/" class="social-media-link" target="_blank">
-          <img src="img\instagram.svg" alt="Instagram Logo" height="32px" width="32px">
+          <img src="img/instagram.svg" alt="Instagram Logo" height="32" width="32">
         </a>
       </div>  	
       <br>	
       <br>		
-      <a href="#top"class="standard-link">Jump to top</a> 
+      <a href="#top" class="standard-link">Jump to top</a> 
     </footer>
-    </div>
     <script src="js/tota11y.min.js"></script>
     <script src="js/copy-text-experiment.js"></script> 
   </body>
