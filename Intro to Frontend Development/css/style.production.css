@@ -93,7 +93,7 @@ h3 {font-size: 22px;
   text-decoration: none;
 }
 #logo {
-  height: 70px
+  height: 70
 }
 
 
@@ -196,27 +196,6 @@ button {
   -webkit-transition: 0.5s opacity;
   -o-transition: 0.5s opacity;
   transition: 0.5s opacity;
-}
-.cv-button {
-  /* overrides browser defaults & resets the border */
-  border: none;
-  display: inline-block;
-  /* button styling */
-  font-family: Josefin Sans;
-  font-weight: 1,400;
-  background-color: #df9920; opacity: 0.9;
-  color: black;	
-  text-decoration: none;
-  padding: 4px;
-  padding-right: 6px;
-  padding-left: 6px;
-  border-radius: 3px;
-  /* creates a "shadow" at the bottom and right of the button*/
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
-  -webkit-transition: 0.5s opacity;
-  -o-transition: 0.5s opacity;
-  transition: 0.5s opacity;  
 }
 button:hover, .button:hover, button:focus, .button:focus {
   /* mouse appears as a hand when on link */
