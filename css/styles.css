@@ -19,8 +19,8 @@ Secondary Color Lighter (Lighter Yellow): #df9920;
   --primary-color: #537e7c;
   --primary-color-darker: #276864;
   --primary-color-text: #2b2b2b;
-  --secondary-color: #c27b00;
-  --secondary-color-lighter: #df9920;
+  --secondary-color: #a86800;
+  --secondary-color-lighter: #d19225;
 }
 div {
   padding: 10px; /* adds 10px spacing inside the div */
@@ -68,10 +68,11 @@ h3 {
   display: flex;
   padding: 20px;
 }
-/* TODO chagne font size */
+/* TODO change font size */
 .page-header__item {
   /*** specifies flex grow, shrink and basis ***/
   flex: 0 1 200px;
+  text-align: right;
 }
 .page-header__item:last-child {
   flex-grow: 1;
@@ -79,6 +80,7 @@ h3 {
 }
 .navigation-list li {
   display: inline-block;
+  font-size: 24px;
   margin-left: 15px;
 }
 .navigation-list__item {
