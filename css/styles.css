@@ -328,8 +328,8 @@ table {
     width: auto;
   }
   table {
-    width: 475px;
-    font-size: 16px;
+    width: 300px;
+    font-size: 15px;
   }
 }
 @media all and (min-width: 500px) and (max-width: 750px) {
