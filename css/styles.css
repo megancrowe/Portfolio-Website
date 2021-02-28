@@ -134,6 +134,33 @@ footer {
 .social-media-link:focus {
   box-shadow: none;
 }
+/***** CV Link Button *****/
+.cv-button {
+  /* overrides browser defaults & resets the border */
+  border: none;
+  display: inline-block;
+  /* button styling */
+  background-color: var(--secondary-color-lighter);
+  /* creates a "shadow" at the bottom and right of the button */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  /* rounds corners of button */
+  border-radius: 3px;
+  color: black;
+  font-family: Josefin Sans;
+  font-weight: var(--font-weight-bold);
+  padding: 4px 6px 0;
+  text-decoration: none;
+  /* determines the length of transition */
+  transition: 0.5s opacity;
+}
+.cv-button:hover,
+.cv-button:focus {
+  /* mouse appears as a hand when on link */
+  cursor: pointer;
+  /* reduces button opacity to 80% */
+  opacity: 0.8;
+}
 
 
 /**************** HOME PAGE PROFILE *****************/
@@ -230,7 +257,7 @@ table {
 /**************** SVG ANIMATION *****************/
 /* For my own SVG animation on index page */
 #mountains-with-sun {
-  max-width: 100%;
+  max-width: 3000px;
   height: auto;
   display: block;
   margin-left: auto;
