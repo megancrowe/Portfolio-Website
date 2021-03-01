@@ -170,6 +170,8 @@ footer {
   float: left;
   margin-left: 40px;
   margin-right: 40px;
+  max-width: 250px;
+  max-height: 250px;
 }
 .profile {
   max-width: 700px;
@@ -330,6 +332,11 @@ table {
   table {
     width: 300px;
     font-size: 15px;
+  }
+  .profile {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 @media all and (min-width: 500px) and (max-width: 750px) {

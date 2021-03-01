@@ -184,6 +184,8 @@ footer {
   float: left;
   margin-left: 40px;
   margin-right: 40px;
+  max-width: 250px;
+  max-height: 250px;
 }
 .profile {
   max-width: 700px;
@@ -404,6 +406,18 @@ table {
   table {
     width: 300px;
     font-size: 15px;
+  }
+  .profile {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 @media all and (min-width: 500px) and (max-width: 750px) {
